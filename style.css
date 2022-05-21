@@ -1,0 +1,828 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    scroll-padding-top: 5rem
+    
+}
+
+/* image acceuil */ 
+
+
+    
+    
+    
+
+    
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* header */
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    padding: 0 2rem;
+    font-size: 30px;
+    position: fixed;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.556);
+    z-index: 2;
+    font-family: 'Jost', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+    color: black;
+}
+.logo a{
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.logo h1 { 
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.toggle {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 900px;
+    font-family: 'Jost', sans-serif;
+}
+
+.menu  {
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+ .bt {
+    background-image: linear-gradient( rgb(197, 121, 255), rgb(197, 121, 255));
+    background-size: 0% 7px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease ; 
+    color: black;
+    text-decoration: none;
+}
+ .bt:hover {
+    background-size: 100% 7px;
+    color: rgb(197, 121, 255);
+    padding-bottom: 2px;
+}
+
+
+.btn {
+    border: 0;
+    background: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 1.1rem 1.2rem;
+    border-radius: 50px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.btn a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.btn.btn-secondary {
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);;
+    padding: 1.1rem 1.2rem;
+    font-size: 30px;
+    color: rgb(0, 0, 0);;
+    border-radius: 50px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+}
+.btn.btn-secondary a{
+    color: black;
+}
+.btn:hover {
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 50px;
+}
+.btn a:hover {
+    color: black;
+}
+
+.btn.btn-secondary:hover {
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+}
+
+.btn.btn-secondary a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+
+/* footer */
+footer {
+    padding: 50px;
+    margin: 0;
+    flex: auto;
+    background: black;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+footer i {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+
+}
+footer i:hover {
+   color: rgb(197, 121, 255);
+}
+/* Acceuil */
+.hero {
+    height: 1000px;
+    background-image:  url("https://u-paris.fr/wp-content/uploads/2020/10/aide-alimentaire.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 150px;
+}
+
+.hero h1 {
+    font-size: 200px;
+    color: rgba(0, 0, 0, 0.72);
+    text-align: center;
+    padding-top: 300px;
+    font-family: 'Jost', sans-serif;
+}
+@media screen and ( max-width: 1000px ) {
+    .hero h1 {
+        font-size: 900%;
+    }
+}
+@media screen and (max-width: 1000px ) {
+    .Acceuil {
+        margin-bottom: 0;
+    }
+}
+/* menu responsive */
+@media all and (max-width: 1000px ) {
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 2;
+    }
+
+    .ouvrir {
+        display: block;
+        color: black;
+    }
+
+    .fermer { 
+        display: none;
+    }
+
+    .open .ouvrir { 
+        display: none;
+        color: black;
+    }
+
+    .open .fermer { 
+        display: block;
+        color: white;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 1s;
+        
+    }
+    .open .menu {
+        transform: translateX(0);
+    }
+    .menu li .bt  {
+        color: white;
+    }
+    .menu li a {
+        font-size: 2rem;
+        color: white;
+    }
+    .menu li .btn a {
+        color: black;
+    }
+    .menu li .btn.btn-secondary a {
+        color: white;
+    }
+    .btn {
+        font-size: 2rem;
+        color: black;
+        background-color: white;
+    }
+    .menu .bt:hover {
+        color: rgb(197, 121, 255);
+    }
+    .menu li .btn:hover {
+        background-color: black;
+        border: 2px solid white;
+        border-radius: 50px;
+    }
+    .menu li .btn a:hover {
+        color: white;
+    }
+
+    .btn.btn-secondary {
+        border: solid 2px white;
+    }
+
+    .menu li .btn.btn-secondary a:hover {
+        color: rgb(0, 0, 0);
+    }
+    .menu li .btn.btn-secondary:hover {
+        background: white;
+    }
+}
+
+/* Carte */
+.carte {
+ background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.789), rgba(0, 0, 0, 0.748)), url("https://www.sotradel.com/wp-content/uploads/2021/04/entreprise-transport-logistique-rhone-alpes-collecte-alimentaire-1.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+   
+} 
+
+.carre {
+    height: 80%;
+    width: 40%;
+    background: rgb(0, 0, 0);
+    border-radius: 0px;
+    position: absolute;
+    margin: 0;
+    top: 10%;
+    left: 55%;
+    display: block;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+.carre p {
+    padding: 0 10%;
+}
+.carre a{
+    color: white;
+    text-decoration: none;
+    font-size: 70px;
+    
+    
+}
+.btncarte {
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 60px;
+    padding: 20px 30px;
+}
+.btncarte a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.btncarte:hover {
+    background-color: rgb(255, 255, 255);
+}
+.carretitre {
+    position: relative;
+    color: rgb(255, 255, 255);
+    margin: auto;
+    font-size: 60px;
+    text-align: center;
+    padding: 10% 10%;    
+    font-family: 'Jost', sans-serif;
+}
+
+.carte1 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.carte2 {
+    background-color: rgb(255, 255, 255);;
+}
+
+/* carte responsive */
+@media screen and ( max-width: 1000px ) {
+    .carte1 {
+       width: 100%;
+       height: 700px;
+    }
+    .carre {
+        position: relative;
+        width: 100%;
+        height: 30%;
+        margin: 0;
+        left: 0;
+        padding: 5% 5% 10% 5%;
+        font-size: 200%;
+        border-radius: 0;
+    }
+    .carre h1 {
+        font-size: 220%;
+    }
+    
+}
+    
+/* sous la carte */
+
+.Acceuil {
+    height: 100%;
+    position: relative;
+    background: transparent;
+    background-size: cover;
+}
+.ac1 {
+    text-align: center;
+    font-size: 100px;
+    color: rgb(0, 0, 0);
+    padding-top: 70px;
+    font-family: 'Jost', sans-serif;
+    padding-bottom: 2300px;
+}
+.Acceuil1 {
+    
+    height: 900px;
+    width: 40%;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    margin: 0px;
+    top: 300px;
+    left: 55%;
+    right: 5%;
+    display: block;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 4% 5% 2% 5%;
+    border-radius: 0px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+.Acceuil2 {
+    
+    height: 900px;
+    width: 40%;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    margin: 0;
+    top: 1400px;
+    left: 55%;
+    right: 5%;
+    display: block;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 4% 5% 2% 5%;
+    border-radius: 0px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+.acc {
+    height: 900px;
+    width: 40%;
+    position: absolute;
+    top: 300px;
+    left: 5%;
+    display: block;
+    border-radius: 0px;
+}
+
+.acc1 {
+    height: 900px;
+    width: 40%;
+    position: absolute;
+    top: 1400px;
+    left: 5%;
+    display: block;
+    border-radius: 0px;
+}
+.Acceuil1 h2 {
+    font-family: 'Jost', sans-serif;
+        font-size: 70px;
+}
+
+.Acceuil2 h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 70px;
+}
+/*objectf responsive */
+
+@media screen and ( max-width: 1000px )
+{
+    .ac1 {
+        font-size: 800%;
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+    .Acceuil1 {
+        position: relative;
+        width: 100%;
+        height: 1000px;
+        color: white;
+        left: 0;
+        font-size: 200%;
+        padding: 10% 5% 5% ;
+        border-radius: 0 ;
+        background-color: black;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .acc {
+        width: 100%;
+        height: 50%;
+        left: 0;
+        position: none;
+        top: 70px;
+        filter: opacity(0);
+    }
+    .Acceuil2 {
+        position: relative;
+        width: 100%;
+        height:  800px;
+        color: white;
+        left: 0;
+        font-size: 200%;
+        top: 30%;
+        padding:  5% 5% 5%;
+        border-radius: 0 ;
+        background-color: black;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .acc1 {
+        width: 100%;
+        height: 700px;
+        left: 0;
+        position: none;
+        top: 70px;
+        filter: opacity(0);
+    }
+
+    
+}
+/* A propos */
+.FAQ {
+    position: relative;
+    z-index: 1
+    ;
+}
+.FAQ1 {
+    padding-top: 250px;
+    width: 100%;
+    height: 2000px;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding-left: 5%;
+    padding-right: 30%;
+}
+.FAQ .titre { 
+    font-size: 100px;
+}
+.FAQ1 .h1 {
+    font-size: 50px;
+    /* border: 1px solid red; */
+    border-radius: 7px;
+    padding: 0;
+    margin: 0;
+
+}
+.FAQ1 p {
+    font-size: 40px;
+}
+.trait { 
+    border-left: 4px solid black; 
+    height: 1300px; 
+    position: absolute;
+    left: 75%;
+    bottom: 20%;
+    top: 28%;
+    right: 30%;
+    z-index: 1;
+    } 
+
+.univ {
+    width: 400px;
+    margin-left: 10rem;
+    margin-top: 80px;
+}
+
+.logot {
+    width: 400px;
+    margin-top: 150px;
+    margin-left: 10rem;
+}
+.logot a{
+    font-size: 52px;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.logot h1 { 
+    font-size: 52px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+@media screen and ( max-width: 2000px ) {
+    .FAQ1 {
+        background-color: black;
+        color: white;
+        margin: auto;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        margin-top: 100px;
+    }
+    .trait {
+       display: inline;
+    }
+    .logot {
+        display: none;
+    }
+    .univ {
+        display: none;
+    }
+
+    .FAQ .p {
+        margin-top: 400px;
+        margin-bottom: 100px;
+    }
+}
+
+
+    
+
+/* contact */
+
+.contact1 {
+    height: 110%;
+}
+.reseaux {
+    font-size: 100px;
+    margin-top: 250px;
+    margin-bottom: 100px;
+    margin-left: 5%;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+.contact1 p { 
+    font-size: 70px;
+
+}
+.contact1 i {
+    cursor: pointer;
+    font-size: 200px;
+    width: 200px;
+    color: black;
+    margin-left: 45%;
+    margin-right: auto;
+    margin-top: 100px;
+}  
+.r {
+    margin-left: 44.5%;
+    font-family: 'Jost', sans-serif;
+}
+.contact1 a {
+    text-decoration: none;
+    margin: none;
+}
+.contact1 .img1:hover {
+    color: rgb(23, 168, 235);
+}
+.contact1 .img2:hover {
+    color: rgb(181, 58, 156) ;
+}
+.contact1 .img3:hover {
+    color: rgb(23, 60, 182)
+}
+.contact1 .img4:hover {
+    color: rgb(165, 25, 25)
+}
+
+@media screen and ( max-width: 2000px ) {
+    .contact1 {
+        height: 170%;
+    }
+}
+
+/* don */
+.dons {
+    height: 300%;
+}
+
+@media screen and ( max-width: 1500px ) {
+    .dons {
+        height: 400%;
+    }
+}
+.asso {
+    font-size: 100px;
+    margin: 200px 50px 50px 50px;
+    text-align: center;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+.dons1 {
+    height: 100%;
+    width: 100%;
+    /* border: solid 6px blue; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+.dons2 {
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 9px 8px 8px 7px rgba(0, 0, 0, 0.405);
+    margin: 150px; 
+}
+
+/* <!-- secour populair  -->  */
+
+.ass1 {
+    text-decoration: none;
+    background: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 1.1rem 1.2rem;
+    border-radius: 50px; 
+    border: 0;
+    margin-left: 95px;
+    margin-top: 80px;
+
+}
+
+.ass1:hover {
+    background-color: white;
+    border: solid 5px black;
+    border-radius: 50px;
+}
+
+.Z1 {
+  max-width: 300px;
+  max-height: 100%;
+  margin-left: 50px;
+}
+
+/* <!-- unicef --> */
+
+.ass2 {
+    text-decoration: none;
+    background: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 1.1rem 1.2rem;
+    border-radius: 50px; 
+    border: 0;
+    margin-left: 95px;
+    margin-top: 200px;
+
+}
+
+.ass2:hover {
+    background-color: white;
+    border: solid 5px black;
+    border-radius: 50px;
+}
+
+.Z2 {
+    max-width: 350px;
+    max-height: 100%;
+    margin-left: 30px;
+    margin-top: 90px;
+  }
+/* 
+<!-- banque alimentaire --> */
+.ass3 {
+    text-decoration: none;
+    background: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 1.1rem 1.2rem;
+    border-radius: 50px; 
+    border: 0;
+    margin-left: 95px;
+    margin-top: 90px;
+
+}
+
+.ass3:hover {
+    background-color: white;
+    border: solid 5px black;
+    border-radius: 50px;
+}
+
+.Z3 {
+    max-width: 350px;
+    max-height: 100%;
+    margin-left: 30px;
+    margin-top: 70px;
+  }
+
+/* <!-- restos du coeur  --> */
+.ass4 {
+    text-decoration: none;
+    background: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 1.1rem 1.2rem;
+    border-radius: 50px; 
+    border: 0;
+    margin-left: 95px;
+    margin-top: 110px;
+
+}
+
+.ass4:hover {
+    background-color: white;
+    border: solid 5px black;
+    border-radius: 50px;
+}
+
+
+.Z4 {
+    max-width: 350px;
+    max-height: 100%;
+    margin-left: 30px;
+    margin-top: 50px;
+  }
+
+/* croix rouge */
+
+.Z5 {
+    max-width: 350px;
+    max-height: 100%;
+    margin-left: 102px;
+    margin-top: 50px;
+}
+
+
+
+
+
+.B1 {
+    padding: none;
+    margin: none;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.B1:hover {
+    color: black;
+}
+
+
+
+
+
+
